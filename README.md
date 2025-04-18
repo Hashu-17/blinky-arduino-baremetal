@@ -52,5 +52,6 @@ The first three statements do just that.
 will left shift a 1 and set bit 4 of the register as output. Alternatively, we can control all the 8 bits at once by writing ```DDRB=16``` or ```DDRB|=B00010000;``` both will set bit 4 of the DDRB register as Output.
 
 Next, we move on to the while loop.```PORTB^=(1<<PB4);``` will set bit 4 of the PORTB register as HIGH. The delay function is called in the next line.
-If you've referred to the official [Arduino Pinout](https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf ), you'll see that PORTB bit 4 or PB4 in short refers to Digital Pin 12 of the Arduino Uno board. Therefore , 
+If you've referred to the official [Arduino Pinout](https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf ), you'll see that PORTB bit 4 or PB4 in short refers to Digital Pin 12 of the Arduino Uno board. Therefore , when the LED is connected to this pin, it will be turned on as the pin has been seet as Output anf then made HIGH. 
+The same follows for the other two LEDs connected to PB3 and PD7. 
 
