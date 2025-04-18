@@ -13,20 +13,20 @@ The code itself can be written on a CLI (Command Line Interface - a text-based i
 In this example we will write a simple code to blink 3 LEDs in a sequence one after the other. This code has two blocks :
 
 delay function
-'''
+```
 void delay(uint32_t count) {
   for (uint32_t i=0; i <count; i++)
   {
     __asm__("nop");
   }
 }
-'''
+```
 
-A simple for loop function which does not return anything, and has a parameter 'count' (which is an unsigned integer 32 bits long) and executes '''  ___asm___("nop"); ''' in the loop.
+A simple for loop function which does not return anything, and has a parameter 'count' (which is an unsigned integer 32 bits long) and executes ```  ___asm___("nop"); ``` in the loop.
 
 
 main function
-'''
+```
 int main(void){
 DDRB|= (1<< PB4);//or PORTB=16
 DDRB|= (1<< PB3);//or PORTB=8
@@ -40,4 +40,4 @@ while (1){
   delay(1000000);
 }
 }
-'''
+```
